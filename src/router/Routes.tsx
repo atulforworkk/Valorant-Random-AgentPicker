@@ -1,14 +1,18 @@
-import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
-import PostAuthLayout from "@/layout/PostAuthLayout";
-import AddUser from "@/page/addUser/AddUser";
+import HomePageLayout from "@/layout/homePageLayout/HomePageLayout";
 import Home from "@/page/home/Home";
-import Login from "@/page/login/Login";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/login",
-    element: <Login />,
+    path: "/",
+    element: <HomePageLayout />,
+
+    children: [
+      {
+        path: "/",
+        element: <Home/>,
+      },
+    ],
   },
 ]);
 
