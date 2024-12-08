@@ -7,6 +7,7 @@ type Props = {};
 const LightDarkButton = (props: Props) => {
     const { setColorScheme } = useMantineColorScheme();
     const computedColorScheme = useComputedColorScheme('dark', { getInitialValueInEffect: true });
+    console.log("🚀 ~ LightDarkButton ~ computedColorScheme:", computedColorScheme)
 
     const lightIconClass = computedColorScheme === 'light' ? 'visible' : 'hidden';
     const darkIconClass = computedColorScheme === 'dark' ? 'visible' : 'hidden';
