@@ -1,6 +1,6 @@
 import LightDarkButton from "@/components/Mode/LightDarkButton";
 import React from "react";
-
+import AgentInfo from "../../"
 type Props = {};
 
 const HomePageHeader = (props: Props) => {
